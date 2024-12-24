@@ -40,7 +40,7 @@ try:
     print(f"Error: {e}") 
 finally:
     print("Execution completed.")
-
+###Lambda function
 ---------------------------------------------------
 # Squaring numbers using map
 numbers = [1, 2, 3, 4]
@@ -51,14 +51,20 @@ print(squared)  # [1, 4, 9, 16]
 evens = list(filter(lambda x: x % 2 == 0, numbers))
 print(evens)  # [2, 4]
 ------------------------------------------------------# Squaring numbers using map
+
+### map function
 numbers = [1, 2, 3, 4]
 squared = list(map(lambda x: x**2, numbers))
 print(squared)  # [1, 4, 9, 16]
+
+###filter function
 
 # Filtering even numbers using filter
 evens = list(filter(lambda x: x % 2 == 0, numbers))
 print(evens)  # [2, 4]
 -------------------------------------------------------
+
+### match case
 # Clean conditional branching
 command = "start"
 match command:
