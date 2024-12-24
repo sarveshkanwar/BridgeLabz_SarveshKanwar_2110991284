@@ -1,1 +1,58 @@
+command = "start"
+
+match command:
+    case "start":
+        print("System is starting.")
+    case "stop":
+        print("System is stopping.")
+    case "restart":
+        print("System is restarting.")
+    case _:
+        print("Unknown command.")
+---------------------------------------
+number = 5
+
+match number:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3 | 4 | 5:
+        print("Three, Four, or Five")
+    case _:
+        print("Other number")
+----------------------------------------
+point = (0, 2)
+
+match point:
+    case (0, 0):
+        print("Origin")
+    case (x, 0):
+        print(f"On the x-axis at x={x}")
+    case (0, y):
+        print(f"On the y-axis at y={y}")
+    case (x, y):
+        print(f"At point ({x}, {y})")
+-----------------------------------------
+item = {"type": "fruit", "name": "apple"}
+
+match item:
+    case {"type": "fruit", "name": name}:
+        print(f"Fruit: {name}")
+    case {"type": "vegetable", "name": name}:
+        print(f"Vegetable: {name}")
+    case _:
+        print("Unknown item")
+-------------------------------------------
+data = [1, 2, 3]
+
+match data:
+    case []:
+        print("Empty list")
+    case [x]:
+        print(f"Single item: {x}")
+    case [x, y]:
+        print(f"Two items: {x}, {y}")
+    case [x, *rest]:
+        print(f"First item: {x}, Rest: {rest}")
 
