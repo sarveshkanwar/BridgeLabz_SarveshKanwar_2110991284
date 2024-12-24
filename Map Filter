@@ -1,1 +1,53 @@
-Map filter
+numbers = [1, 2, 3, 4, 5]
+
+# Double each number in the list
+
+doubled = list(map(lambda x: x * 2, numbers))
+print(doubled)  # Output: [2, 4, 6, 8, 10]
+-----------------------------------
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Filter out odd numbers
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6, 8]
+----------------------------------
+numbers = [1, 2, 3, 4, 5]
+
+# Double only the even numbers
+
+doubled_evens = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+print(doubled_evens)  # Output: [4, 8]
+----------------------------------
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+# Filter words with more than 5 letters
+
+long_words = list(filter(lambda word: len(word) > 5, words))
+print(long_words)  # Output: ['banana', 'cherry', 'elderberry']
+-------------------------------------
+def square(x):
+    return x ** 2
+
+def is_positive(x):
+    return x > 0
+
+numbers = [-2, -1, 0, 1, 2]
+
+# Filter positive numbers and then square them
+
+squared_positives = list(map(square, filter(is_positive, numbers)))
+print(squared_positives)  # Output: [1, 4]
+-----------------------------------------
+numbers1 = [1, 2, 3, 4]
+numbers2 = [5, 6, 7, 8]
+
+# Add corresponding elements of two lists
+added = list(map(lambda x, y: x + y, numbers1, numbers2))
+print(added)  # Output: [6, 8, 10, 12]
+----------------------------------------
+data = [[1, 2], [3, 4], [5, 6], [7, 8]]
+
+# Filter out lists where the sum of elements is greater than 10
+filtered_data = list(filter(lambda x: sum(x) > 10, data))
+print(filtered_data)  # Output: [[7, 8]]
