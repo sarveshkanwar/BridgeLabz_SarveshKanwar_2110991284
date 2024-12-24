@@ -34,10 +34,46 @@
 
 #### 🔹 **Exception Handling**
 ```python
-# Managing runtime errors with try-except-finally
+
 try:
-    result = 10 / 0  # Raises ZeroDivisionError
-except ZeroDivisionError as e:
-    print(f"Error: {e}")  # Handling the error
+    result = 10 / 0 
+    print(f"Error: {e}") 
 finally:
     print("Execution completed.")
+
+---------------------------------------------------
+# Squaring numbers using map
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # [1, 4, 9, 16]
+
+# Filtering even numbers using filter
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [2, 4]
+------------------------------------------------------# Squaring numbers using map
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # [1, 4, 9, 16]
+
+# Filtering even numbers using filter
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [2, 4]
+-------------------------------------------------------
+# Clean conditional branching
+command = "start"
+match command:
+    case "start":
+        print("Program started.")
+    case "stop":
+        print("Program stopped.")
+    case _:
+        print("Unknown command.")
+--------------------------------------------------------
+# Placeholder for future code
+def my_function():
+    pass  # Code will be implemented later
+-------------------------------------------------------
+# Exploring attributes of the math module
+import math
+print(dir(math))
+
