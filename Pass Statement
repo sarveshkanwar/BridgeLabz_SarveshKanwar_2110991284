@@ -1,1 +1,16 @@
-
+def calculate(value):
+    if value > 0:
+        pass
+    else:
+        print("Negative value")
+------------------------------
+class Example:
+    def method(self):
+        pass
+-------------------------------
+for i in range(10):
+    if i % 2 == 0:
+        pass
+    else:
+        print(i)
+-------------------------------
