@@ -24,4 +24,70 @@ You can execute a module as a standalone script using the `__name__` variable. W
 ```python
 if __name__ == "__main__":
     print("Module executed as a script!")
+🛠 Standard Modules
+Python has a rich standard library with modules that provide built-in functionality.
+```
+## 🧩Popular Modules:
+os: Interact with the operating system.
+sys: System-specific parameters and functions.
+math: Mathematical functions and constants.
+random: Generate random numbers.
+json: Work with JSON data (serialization and deserialization).
+datetime: Handle date and time.
+Example:
+python
+Copy code
+import math  
+print(math.sqrt(16))  # Output: 4.0  
+📝 “Compiled” Python Files
+Python automatically compiles imported modules into bytecode files to improve performance. These compiled files have a .pyc extension and are stored in the __pycache__ folder.
 
+Example:
+When you import a module:
+
+python
+Copy code
+import my_module  
+Python creates a file like:
+
+bash
+Copy code
+__pycache__/my_module.cpython-<version>.pyc  
+These files help speed up future imports by avoiding recompilation.
+
+🔍 The dir() Function
+The dir() function is a built-in utility that returns a list of attributes, methods, or functions available in a module, object, or class.
+
+Example:
+python
+Copy code
+import math  
+print(dir(math))  
+This will output all the attributes and methods of the math module, making it easier to explore its functionality.
+
+✨ Dunder/Magic Methods
+Dunder (double underscore) or magic methods are special methods in Python that define the behavior of certain operations. These methods start and end with double underscores (__).
+
+Common Magic Methods:
+__init__(self): Initializes an object (like a constructor in other languages).
+__str__(self): Returns a string representation of the object.
+__add__(self, other): Defines the behavior of the + operator.
+__len__(self): Defines the behavior of the len() function.
+__getitem__(self, key): Allows objects to be accessed using square brackets.
+Example:
+python
+Copy code
+class CustomObject:  
+    def __init__(self, value):  
+        self.value = value  
+
+    def __str__(self):  
+        return f"CustomObject({self.value})"  
+
+    def __add__(self, other):  
+        return CustomObject(self.value + other.value)  
+
+obj1 = CustomObject(10)  
+obj2 = CustomObject(20)  
+print(obj1 + obj2)  # Output: CustomObject(30)  
+Magic methods allow you to create more intuitive and Pythonic code for your custom classes.
