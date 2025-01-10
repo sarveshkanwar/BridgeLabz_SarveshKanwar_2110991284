@@ -32,8 +32,7 @@ os: Interact with the operating system.
 sys: System-specific parameters and functions.
 math: Mathematical functions and constants.
 random: Generate random numbers.
-json: Work with JSON data (serialization and deserialization).
-datetime: Handle date and time.
+
 Example:
 python
 Copy code
@@ -71,9 +70,7 @@ Dunder (double underscore) or magic methods are special methods in Python that d
 Common Magic Methods:
 __init__(self): Initializes an object (like a constructor in other languages).
 __str__(self): Returns a string representation of the object.
-__add__(self, other): Defines the behavior of the + operator.
-__len__(self): Defines the behavior of the len() function.
-__getitem__(self, key): Allows objects to be accessed using square brackets.
+
 Example:
 python
 Copy code
